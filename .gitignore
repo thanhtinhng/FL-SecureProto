@@ -1,0 +1,38 @@
+venv/
+.env
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# thư mục chứng chỉ SSL
+certs/
+*.pem
+*.crt
+*.key
+
+# file log & cache
+logs/
+*.log
+*.sqlite3
+*.db
+*.cache
+*.bak
+
+# file dữ liệu lớn (nếu có)
+data/
+*.csv
+*.json
+*.h5
+*.pickle
+*.npy
+
+# thư mục của IDE
+.vscode/
+.idea/
+*.swp
+
+# file tạo bởi hệ thống
+.DS_Store
+Thumbs.db
