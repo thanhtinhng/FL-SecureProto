@@ -7,10 +7,13 @@ __pycache__/
 *.pyd
 
 # thư mục chứng chỉ SSL
-certs/
-*.pem
-*.crt
-*.key
+# Ignore private keys để tránh rò rỉ bảo mật
+certs/*.key
+certs/*.csr
+certs/*.srl
+
+# KHÔNG ignore file chứng chỉ công khai
+!certs/*.crt
 
 # file log & cache
 logs/
