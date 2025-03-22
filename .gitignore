@@ -8,12 +8,12 @@ __pycache__/
 
 # thư mục chứng chỉ SSL
 # Ignore private keys để tránh rò rỉ bảo mật
-certs/*.key
-certs/*.csr
-certs/*.srl
+certificates/*.key
+certificates/*.csr
+certificates/*.srl
 
 # KHÔNG ignore file chứng chỉ công khai
-!certs/*.crt
+!certificates/*.crt
 
 # file log & cache
 logs/
