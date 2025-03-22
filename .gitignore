@@ -5,13 +5,9 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
-
-# thư mục chứng chỉ SSL
+keys/
 certificates/
 
-keys/
-
-# file log & cache
 logs/
 *.log
 *.sqlite3
