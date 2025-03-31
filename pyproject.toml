@@ -21,8 +21,8 @@ packages = ["."]
 publisher = "Yuuchi"
 
 [tool.flwr.app.components]
-serverapp = "myfl_flwr_pytorch.server_app:app"
-clientapp = "myfl_flwr_pytorch.client_app:app"
+serverapp = "server_app:app"
+clientapp = "client_app:app"
 
 [tool.flwr.app.config]
 num-server-rounds = 3
@@ -36,7 +36,7 @@ default = "distributed"
 options.num-supernodes = 10
 
 [tool.flwr.federations.distributed]
-client-app = "myfl_flwr_pytorch.client_app:app"
-server-app = "myfl_flwr_pytorch.server_app:app"
+client-app = "client_app:app"
+server-app = "server_app:app"
 address = "192.168.1.9:9093" # thay IP của máy chạy SuperLink
 insecure = true
