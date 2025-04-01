@@ -1,5 +1,7 @@
 [build-system]
-requires = ["hatchling"]
+requires = [
+    "hatchling",
+]
 build-backend = "hatchling.build"
 
 [project]
@@ -15,7 +17,9 @@ dependencies = [
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["."]
+packages = [
+    ".",
+]
 
 [tool.flwr.app]
 publisher = "Yuuchi"
@@ -28,18 +32,3 @@ clientapp = "myfl_flwr_pytorch.client_app:app"
 num-server-rounds = 3
 fraction-fit = 0.5
 local-epochs = 1
-
-[tool.flwr.federations]
-default = "distributed"
-
-[tool.flwr.federations.local-simulation]
-options.num-supernodes = 10
-
-[tool.flwr.federations.distributed]
-client-app = "myfl_flwr_pytorch.client_app:app"
-server-app = "myfl_flwr_pytorch.server_app:app"
-address = "localhost:9093" # thay IP của máy chạy SuperLink
-options.num-supernodes = 10
-root-certificates = "certificates/ca.crt"
-insecure = false # set về true nếu không dùng tls
-
